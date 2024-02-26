@@ -33,7 +33,7 @@ A server with at least 100 GB RAM is recommended.
 ### Process Data
 The code is shown in process data, where for benchmark dataset, we first translate the SPARQL into readable s-expression, and as for KB corpus, we generate question and logical expression pairs through GPT-3.5. We give a exmaple of data construction on Freebase corpus and WebQSP dataset.
 
-### Freebase and WebQSP
+#### Freebase and WebQSP
 
 [WebQSP](https://www.microsoft.com/en-us/research/publication/the-value-of-semantic-parse-labeling-for-knowledge-base-question-answering-2/) dataset has been downloaded under `data/WebQSP/origin`.
 
@@ -51,4 +51,4 @@ Here gives a training shell example for Freebase and WebQSP:
 ```bash
 CUDA_VISIBLE_DEVICES=3 sh train_bash.sh --stage sft --model_name_or_path meta-llama/Llama-2-7b-hf --do_train  --dataset_dir LLMs/data --dataset Freebase_train 
 ```
-## Evaluate
+
